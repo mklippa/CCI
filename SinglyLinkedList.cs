@@ -97,18 +97,19 @@ namespace practice
             }
         }
 
-        public void RemoveAt(int index)
+        public T RemoveAt(int index)
         {
             if (index >= _length || index < 0)
                 throw new IndexOutOfRangeException();
             
             if (index == 0)
             {
+                var rootRes = _root.Value;
                 _root = _root.Next;
                 if (_root is null)
                     _head = null;
                 _length -= 1;
-                return;
+                return rootRes;
             }
 
             var curIndex = 0;
@@ -119,9 +120,11 @@ namespace practice
             }
             if (node.Next == _head)
                 _head = node;
+            var res = node.Next.Value;
             node.Next = node.Next.Next;
 
             _length -= 1;
+            return res;
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -156,7 +159,7 @@ namespace practice
         void Append(T value);
         void InsertTo(int index, T value);
         void Remove(T value);
-        void RemoveAt(int index);
+        T RemoveAt(int index);
         int Length { get; }
     }
 }

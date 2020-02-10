@@ -6,54 +6,31 @@ namespace practice
     {
         static void Main(string[] args)
         {
-            var linkedList1 = new DoublyLinkedList<int>();
-            linkedList1.Append(1);
-            Console.WriteLine(linkedList1);
-            linkedList1.Append(3);
-            Console.WriteLine(linkedList1);
+            var arr = new ArrayList<int>();
 
-            linkedList1.InsertTo(0, 0);
-            Console.WriteLine(linkedList1);
-            linkedList1.InsertTo(2, 2);
-            Console.WriteLine(linkedList1);
-            linkedList1.InsertTo(4, 4);
-            Console.WriteLine(linkedList1);
+            arr.Add(0);
+            arr.Add(1);
+            arr.Add(2);
+            arr.Add(3);
 
-            Console.WriteLine();
+            Console.WriteLine(arr);
 
-            var linkedList2 = new DoublyLinkedList<int>();
-            linkedList2.Append(1);
-            linkedList2.Append(2);
-            linkedList2.Append(3);
-            linkedList2.Append(4);
-            Console.WriteLine(linkedList2);
+            Console.WriteLine(arr.Get(0));
+            Console.WriteLine(arr.Get(1));
+            Console.WriteLine(arr.Get(2));
+            Console.WriteLine(arr.Get(3));
+
+            arr.RemoveAt(1);
+            Console.WriteLine(arr);
             
-            linkedList2.Remove(1);
-            Console.WriteLine(linkedList2);
-            linkedList2.Remove(3);
-            Console.WriteLine(linkedList2);
-            linkedList2.Remove(4);
-            Console.WriteLine(linkedList2);
-            linkedList2.Remove(2);
-            Console.WriteLine(linkedList2);
-
-            Console.WriteLine();
-
-            var linkedList3 = new DoublyLinkedList<int>();
-            linkedList3.Append(0);
-            linkedList3.Append(1);
-            linkedList3.Append(2);
-            linkedList3.Append(3);
-            Console.WriteLine(linkedList3);
+            arr.RemoveAt(0);
+            Console.WriteLine(arr);
             
-            linkedList3.RemoveAt(0);
-            Console.WriteLine(linkedList3);
-            linkedList3.RemoveAt(1);
-            Console.WriteLine(linkedList3);
-            linkedList3.RemoveAt(1);
-            Console.WriteLine(linkedList3);
-            linkedList3.RemoveAt(0);
-            Console.WriteLine(linkedList3);
+            arr.RemoveAt(1);
+            Console.WriteLine(arr);
+            
+            arr.RemoveAt(0);
+            Console.WriteLine(arr);
         }
     }
 }

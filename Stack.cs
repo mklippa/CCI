@@ -1,26 +1,24 @@
+using System;
+
 namespace practice
 {
-    public class Stack<T> : IStack<T>
+    public class Stack<T>
     {
-        private ISinglyLinkedList<T> _linkedList = new SinglyLinkedList<T>();
-        public int Length => _linkedList.Length;
+        private ArrayList<T> _list = new ArrayList<T>();
+        public uint Length => _list.Length;
 
         public T Pop()
         {
-            // bad approach, O(N) 
-            return _linkedList.RemoveAt(_linkedList.Length - 1);
+            if (Length == 0)
+                throw new InvalidOperationException();
+            var res = _list.Get(_list.Length - 1);
+            _list.Get(_list.Length - 1);
+            return res;
         }
 
         public void Push(T value)
         {
-            _linkedList.Append(value);
+            _list.Add(value);
         }
-    }
-
-    public interface IStack<T>
-    {
-        void Push(T value);
-        T Pop();
-        int Length { get; }
     }
 }

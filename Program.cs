@@ -6,7 +6,7 @@ namespace practice
     {
         static void Main(string[] args)
         {
-            var linkedList1 = new SinglyLinkedList<int>();
+            var linkedList1 = new DoublyLinkedList<int>();
             linkedList1.Append(1);
             Console.WriteLine(linkedList1);
             linkedList1.Append(3);
@@ -21,7 +21,7 @@ namespace practice
 
             Console.WriteLine();
 
-            var linkedList2 = new SinglyLinkedList<int>();
+            var linkedList2 = new DoublyLinkedList<int>();
             linkedList2.Append(1);
             linkedList2.Append(2);
             linkedList2.Append(3);
@@ -39,7 +39,7 @@ namespace practice
 
             Console.WriteLine();
 
-            var linkedList3 = new SinglyLinkedList<int>();
+            var linkedList3 = new DoublyLinkedList<int>();
             linkedList3.Append(0);
             linkedList3.Append(1);
             linkedList3.Append(2);

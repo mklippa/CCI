@@ -12,13 +12,17 @@ namespace practice
             if (Length == 0)
                 throw new InvalidOperationException();
             var res = _list.Get(_list.Length - 1);
-            _list.Get(_list.Length - 1);
+            _list.RemoveAt(_list.Length - 1);
             return res;
         }
 
         public void Push(T value)
         {
             _list.Add(value);
+        }
+
+        public override string ToString() {
+            return $"{string.Join(", ", _list)}, Length: {Length}";
         }
     }
 }

@@ -6,31 +6,20 @@ namespace practice
     {
         static void Main(string[] args)
         {
-            var arr = new ArrayList<int>();
+            var stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+            Console.WriteLine(stack);
 
-            arr.Add(0);
-            arr.Add(1);
-            arr.Add(2);
-            arr.Add(3);
-
-            Console.WriteLine(arr);
-
-            Console.WriteLine(arr.Get(0));
-            Console.WriteLine(arr.Get(1));
-            Console.WriteLine(arr.Get(2));
-            Console.WriteLine(arr.Get(3));
-
-            arr.RemoveAt(1);
-            Console.WriteLine(arr);
-            
-            arr.RemoveAt(0);
-            Console.WriteLine(arr);
-            
-            arr.RemoveAt(1);
-            Console.WriteLine(arr);
-            
-            arr.RemoveAt(0);
-            Console.WriteLine(arr);
+            var length = stack.Length;
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine(stack.Pop());
+                Console.WriteLine(stack);
+            }
         }
     }
 }

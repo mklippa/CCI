@@ -6,8 +6,7 @@ namespace practice
     {
         static void Main(string[] args)
         {
-            var arr = new []{3,2,1,5,6,4,7,8,0};
-            Console.WriteLine(BinarySearch(MergeSort(arr), -1));
+            BFS(_graph);
         }
     }
 }
